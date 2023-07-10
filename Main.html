@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Main Page</title>
+
+        <style>
+           .profilePic{
+            position:absolute; 
+            left:37%; 
+            top: 200px; 
+            border-radius: 100%;
+            z-index: 1;
+           }
+
+           .profileBan{
+            position:absolute; 
+            left:35.45vw; 
+            top: 162px; 
+            border-top-left-radius:  20px;
+            border-top-right-radius:  20px;
+            z-index: 0;
+           }
+           .icon{
+            position:absolute;
+            z-index: 2;
+            margin-left:1vw;
+           }
+
+            custom {
+
+            }
+
+            .backgroundResume {
+                background-color: #161616;
+                width: 300px;
+                height: 500px;
+                position: absolute;
+
+                right:200px;
+                top:155px;
+
+                border-radius: 10px;
+
+            
+                
+            }
+
+            @keyframes FadeOut{
+                0%{opacity:100%;}
+                100%{opacity:0%}
+            }
+            @keyframes FadeIn{
+                0%{opacity:0%;}
+                100%{opacity:100%}
+            }
+            .moveAblePanel{
+                stroke-width: 0px;
+            }
+        
+        </style>
+        
+	</head>
+<script>
+    var opacityEnabled = false
+    document.getElementById("skillBoard").style.opacity = "0%";
+    var isMoved = false;
+
+
+    function timer(ms) { return new Promise(res => setTimeout(res, ms)); }
+
+
+    function changeOpacity(Value) 
+    {
+        if (Value == true)
+        {
+            let OpacityValue = 100;
+            
+            setTimeout(()=>document.getElementById("skillBoard").style.opacity = OpacityValue.toString() + "%", "100"); 
+            setTimeout(()=>OpacityValue = OpacityValue - 5, "101");    
+            
+        }
+    }
+
+    function ShowSkills() {
+        viewPortWidth = window.innerWidth;
+        viewPortWidth = window.innerHeight;
+        /*
+        if (viewPortWidth < 780 && viewPortWidth > 500){
+            if (isMoved == true) {
+                const elements = document.querySelectorAll('[id="holderKid"]');
+                isMoved = false;
+
+                elements.forEach((element) => {
+                    currPos = element.getBoundingClientRect();
+        
+                    element.style.top = (currPos.top - 550) + "px";
+                   // element.style.right = (currPos.Left + 300) + "px";
+                   
+                }); 
+            }
+            else{
+                const elements = document.querySelectorAll('[id="holderKid"]');
+                isMoved = true;
+                
+                elements.forEach((element) => {
+                    currPos = element.getBoundingClientRect();
+                    
+                    if (currPos.top <= 600){
+                        element.style.top = (currPos.top + 550) + "px";
+                        element.style.left = (currPos.left + 180) + "px";
+                    }
+                   
+                    
+                    
+                   
+                });
+            }
+        
+            //document.getElementById("skillBoard").style.top = "1000px";
+            //document.getElementsByClassName("moveAblePanel").style.top = "1000px";
+        }
+        else {
+            
+        }
+        */
+       if (opacityEnabled == false){
+        alert(viewPortWidth);
+        setTimeout(()=>document.getElementById("skillBoard").style.opacity = "100%", "1500"); 
+
+        document.getElementById("skillBoard").style.animation = ""
+        setTimeout(()=>document.getElementById("skillBoard").style.animation ="FadeIn 1.5s 1 forwards", 3.3); 
+       
+
+        opacityEnabled = true;
+
+        }
+
+       else if (opacityEnabled == true)
+       { 
+        var elements = document.getElementById("skillBoard");
+        setTimeout(()=>document.getElementById("skillBoard").style.opacity = "0%", "1500"); 
+
+        document.getElementById("skillBoard").style.animation = ""
+        setTimeout(()=>document.getElementById("skillBoard").style.animation ="FadeOut 1.5s 1 forwards", 3.3); 
+        
+        opacityEnabled = false;
+       }
+    }
+    
+</script>
+
+
+
+    <body bgcolor="#ff8533">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+		<custom class="CardHolder" id="Holder" style="justify-content:center; align-items:center;">
+            <canvas  id="MainDetail" width="400" height="500"   style="position:relative; left: 35%; top: 150px; z-index: 0; background-color: #1d1d1d; border-radius:20px">
+            
+               Your browser does not support the HTML canvas tag.
+            </canvas>
+
+            <img src="banner.png", class="profileBan" width="390", height="86" alt="avatar" >
+
+            <img src="helolo.png", class="profilePic" width="70", height="70" alt="avatar" >
+            <canvas id="avatarLine" width="380", height="2" style="position:absolute; left: 35.6%; z-index: 0; top: 250px; background-color: #262626;">
+
+            </canvas>
+    
+      
+            <canvas  id="MainDetail" width="370" height="240"   style="position:absolute; left: 36vw; top: 290px; z-index: 1; background-color: #161616; border-radius:20px">
+            
+                Your browser does not support the HTML canvas tag.
+            </canvas>
+            <canvas id="avatarLine" width="340", height="2" style="position:absolute; left: 37%; z-index: 2; top: 320px; background-color: #383838;"></canvas>
+            <font  style=" font-family:Sans-serif; position:absolute; color: aliceblue; z-index: 2; font-size: 20px; left: 37.3%; top: 295px;">
+                BeNwEP
+            </font>
+
+            <font  style="font-size: 14px; font-family:Sans-serif; border-radius: 5px; background-color: #1a1a1a; color:aliceblue; position:absolute; left:37%; z-index: 2; top:335px;">
+            Hi, Im Saul
+                <p></p>
+            Im Fullstack developer(or atleast im learning this skills)
+            </font>
+
+            <canvas  id="MainDetail" width="370" height="100"   style="position:absolute; left: 36.3%; top: 540px; z-index: 1; background-color: #161616; border-radius:20px">
+            </canvas>
+
+            <font  style="font-size: 14px; font-family:Sans-serif; border-radius: 5px; background-color: #1a1a1a; color:aliceblue; position:absolute; left:37%; z-index: 2; top:550px;">
+                Programming language skills:
+            </font>
+
+            <!--
+            <img src="balance.png", class="icon" width="23", height="23" style="position: relative ; left: 32vw; bottom:230px;">
+            -->
+            <font  style="font-size: 14px; font-family:Sans-serif; border-radius: 5px; background-color: #1a1a1a; color:aliceblue; position:absolute; left:37%; z-index: 2; top:500px;">
+                
+                <!--Not taking commisions  (for now)-->
+                 I dont know what to write here.
+            </font>
+
+            <font  style="font-size: 14px; font-family:Sans-serif; border-radius: 5px; background-color: #1a1a1a; color:aliceblue; position:absolute; left:37%; z-index: 2; top:420px;">        
+                Currently learning design
+            </font>
+
+            <img src="csharp.png", class="icon" id="PLicon" width="25", height="25" style=" left: 37vw;  top: 570px;z-index: 2;">
+            <img src="html.png", class="icon" id="PLicon" width="25", height="25" style=" left: 39vw;  top: 570px;z-index: 2;">
+            <img src="css.png", class="icon" id="PLicon" width="25", height="25" style=" left: 41vw;  top: 570px;z-index: 2;">
+            <img src="js.png", class="icon" id="PLicon" width="25", height="25" style=" left: 43vw;  top: 570px;z-index: 2;">
+            <img src="php.png", class="icon" id="PLicon" width="35", height="25" style=" left: 45vw;  top: 570px;z-index: 2;">  
+        </custom>
+
+
+        <!--
+        <button  onclick="ShowSkills()" style="position:absolute;z-index:5; right:50px;"> More </button>
+
+        <custom id="skillBoard" class="moveAblePanel" style="z-index:1; opacity:0%;">
+            <canvas id="holderKid" id="holderKid" class="backgroundResume" style="position:absolute;"></canvas>
+
+            
+
+            <canvas class="moveAblePanel"id="holderKid"  style="position:absolute; right:400px; top:200px; width:70px;height:70px; border-radius:50%;background-color:#ff9900;justify-content:right; align-items:right;"></canvas>
+            <canvas class="moveAblePanel"id="holderKid"  style="position:absolute; right:412px; top:212px; width:45px;height:45px; border-radius:50%;background-color:#161616;justify-content:right; align-items:right;"></canvas>
+            <canvas class="moveAblePanel"id="holderKid"  style="position:absolute; right:432px; top:200px; width:5px;height:18px;  background-color:#161616;justify-content:right; align-items:right;"></canvas>
+            <font class="moveAblePanel" id="holderKid" style=" position:absolute; right:413px; font-size:15px; top:224px;font-family:Tahoma;font-weight: bold; color:aliceblue;justify-content:right; align-items:right;">90%</font>
+            <font class="moveAblePanel" id="holderKid" style=" position:absolute; right:413px; font-size:15px; top:175px;font-family:Tahoma;font-weight: bold; color:aliceblue;justify-content:right; align-items:right;">HTML</font>
+        
+            <canvas class="moveAblePanel" id="holderKid" style="position:absolute; right:320px; top:200px; width:70px;height:70px; border-radius:50%;background-color:#ff9900;justify-content:right; align-items:right;"></canvas>
+            <canvas class="moveAblePanel"id="holderKid"  style="position:absolute; right:332px; top:212px; width:45px;height:45px; border-radius:50%;background-color:#161616;justify-content:right; align-items:right;"></canvas>
+            <canvas class="moveAblePanel" id="holderKid" style="position:absolute; right:315px; top:200px; width:40px;height:70px; border-top-right-radius: 50%; border-bottom-left-radius: 100%;justify-content:right; align-items:right;  background-color:#161616;"></canvas>
+            <font class="moveAblePanel" id="holderKid" style=" position:absolute; right:333px; font-size:15px; top:224px;font-family:Tahoma;font-weight: bold; color:aliceblue;justify-content:right; align-items:right;">60%</font>
+            <font class="moveAblePanel" id="holderKid" style=" position:absolute; right:343px; font-size:15px; top:175px;font-family:Tahoma;font-weight: bold; color:aliceblue;justify-content:right; align-items:right;">Css</font>
+            
+            <canvas class="moveAblePanel" id="holderKid" style="position:absolute; right:240px; top:200px; width:70px;height:70px; border-radius:50%;background-color:#ff9900;justify-content:right; align-items:right;"></canvas>
+            <canvas class="moveAblePanel"id="holderKid"  style="position:absolute; right:252px; top:212px; width:45px;height:45px; border-radius:50%;background-color:#161616;justify-content:right; align-items:right;"></canvas>
+            <canvas class="moveAblePanel" id="holderKid" style="position:absolute; right:235px; top:235px; width:80px;height:70px; border-bottom-left-radius: 100%;  background-color:#161616;justify-content:right; align-items:right;"></canvas>
+            <canvas class="moveAblePanel" id="holderKid" style="position:absolute; right:215px; top:195px; width:60px;height:70px; border-bottom-left-radius: 100%;  background-color:#161616;justify-content:right; align-items:right;"></canvas>
+            <font class="moveAblePanel" id="holderKid" style=" position:absolute; right:253px; font-size:15px; top:224px;font-family:Tahoma;font-weight: bold; color:aliceblue;z-index:5;justify-content:right; align-items:right;">30%</font>
+            <font class="moveAblePanel" id="holderKid" style=" position:absolute; right:265px; font-size:15px; top:175px;font-family:Tahoma;font-weight: bold; color:aliceblue;justify-content:right; align-items:right;">Js</font>
+            
+            <font class="moveAblePanel" id="holderKid" style=" position:absolute; right:293px; font-size:15px; top:274px;font-family:Tahoma;font-weight: bold; color:aliceblue;z-index:5;justify-content:right; align-items:right;">*Only web skills*</font>
+           
+
+        </custom>
+        -->
+        </body>
+
+
+</html>
