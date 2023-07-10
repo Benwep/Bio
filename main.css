@@ -50,6 +50,12 @@ body{
     padding-bottom: 100%;
 }
 
+.fontmonospace{
+    font-family:sans-serif;
+    font-size:3vw;
+}
+
+
 .font3{
     font-family:monospace;
     font-size:2vw;
