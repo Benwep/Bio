@@ -27,13 +27,53 @@ body{
 @media screen 
     and (width < 500px) {
         #name {
-            top:8.5%;
+            top:1.5%;
         }
+        #jobName {
+            top:3%;
+        }
+        .secondPanel{
+            background-color:#f2f2f2;
+        
+            top:0;
+            left:0;
+        
+            width:100%;
+            height:5%;
+        
+            display:flex;
+            opacity:0.95;
+        }
+
 }
 @media screen 
     and (width > 500px){
         #name {
             top:6%;
+        }
+        #jobName {
+            top:10%;
+        }
+        .secondPanel{
+            background-color:#f2f2f2;
+        
+            top:0;
+            left:0;
+        
+            width:100%;
+            height:20%;
+        
+            display:flex;
+            opacity:0.95;
+        }
+}
+@media screen 
+    and (width < 500px){
+        #name {
+            top:6%;
+        }
+        #jobName {
+            top:10%;
         }
 }
 .profilePicture {
