@@ -67,15 +67,7 @@ body{
             opacity:0.95;
         }
 }
-@media screen 
-    and (width < 500px){
-        #name {
-            top:6%;
-        }
-        #jobName {
-            top:10%;
-        }
-}
+
 .profilePicture {
     width:25%;
     box-sizing: border-box;
