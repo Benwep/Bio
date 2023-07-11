@@ -26,6 +26,9 @@ body{
 }
 @media screen 
     and (width < 500px) {
+        .font4{
+            top:5%;
+        }
         #name {
             top:1.5%;
         }
@@ -44,10 +47,13 @@ body{
             display:flex;
             opacity:0.95;
         }
-
+        
 }
 @media screen 
     and (width > 500px){
+        .font4{
+            top:20%;
+        }
         #name {
             top:6%;
         }
