@@ -11,6 +11,9 @@ body{
     top:0;
     height: 100%;
     opacity:0.9;
+
+    display:flex;
+    align-items: flex-end;
 }
 .secondPanel{
     background-color:#f2f2f2;
@@ -26,8 +29,11 @@ body{
 }
 @media screen 
     and (width < 500px) {
-        .font4{
+        #AboutText{
             top:5%;
+        }
+        #SkillsText{
+            top:7%;
         }
         #name {
             top:1.5%;
@@ -51,8 +57,11 @@ body{
 }
 @media screen 
     and (width > 500px){
-        .font4{
+        #AboutText{
             top:20%;
+        }
+        #SkillsText{
+            top:22%;
         }
         #name {
             top:6%;
@@ -105,10 +114,4 @@ body{
 .font2{
     font-family:sans-serif;
     font-size:0.8vw;
-}
-.font4{
-    font-family:sans-serif;
-    font-size:1.6vw;
-
-    margin:1%;
 }
