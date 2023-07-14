@@ -14,18 +14,22 @@
     <body>
 
         <div class="sidePanel">
-            <div class="secondPanel" >
-                <img src="helolo.png" class="profilePicture">
+            <div class="secondPanel" style="">
+                <img src="helolo.png" class="profilePicture" style="position:absolute;width:30%; z-index:1;">
+
+                <div style="width:100%;height:20%;background-color:rgb(252, 244, 241);z-index:0;position:absolute;"> <!-- Just makes it white cuz of bug--></div>
 
                 <font id="name" class="font3" style="margin-left:5px;position: absolute;left:50%;"> Saul</font>
                 <font id="jobName" class="font2" style="margin-left:5px;position: absolute;right:15%;"> Fullstack web developer</font>
             </div>
 
-            <div id="AboutText" class="font4" style="position: relative;justify-self:center;margin-top:5%;"> About me</font>
-            <div id="SkillsText" class="font4" style="position: relative;justify-self:center;margin-top:5%; "> Skills</font>
+            <font onclick="about()" id="AboutText" class="font4" style="margin-top:-40%;">About me</font>
+            <font id="SkillsText" class="font4">Skills</font>
+               
         </div>
 
     </body>
 
 
 </html>
+<script src="script.js"></script>
