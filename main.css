@@ -56,6 +56,9 @@ body{
             display:flex;
             opacity:0.95;
         }
+        #secondPanel2{
+            height:5%;
+        }
         
 }
 @media screen 
@@ -154,5 +157,4 @@ body{
     border:1px solid red;
 
     flex-shrink: 0;
-
 }

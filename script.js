@@ -25,4 +25,12 @@ jQuery(function ($) {
         element.style.opacity = 0;
         element.style.animation = "fadeOut 1s"; 
     })
+    $( "#2022" ).on( "mouseleave", function() {
+        element.style.opacity = 0;
+        element.style.animation = "fadeOut 1s"; 
+    })
+    $( "#2023" ).on( "mouseleave", function() {
+        element.style.opacity = 0;
+        element.style.animation = "fadeOut 1s"; 
+    })
 })
