@@ -1,36 +1,10 @@
-function about(){
-    window.location.href = "about.html";
+var programmingSkills = {
+    HTML:80,
+    Javascript:20,
+    CSS:70
 }
-var images = document.getElementsByClassName('stage');
 
 
-
-jQuery(function ($) {
-    $(".stage").mouseover(function (e) {
-        var elementId = $(e.target).attr('id');
-        console.log(elementId);
-
-        var elementId = elementId + "Panel";
-        element = document.getElementById(elementId);
-
-        element.style.opacity = 1;
-        element.style.animation = "fadeIn 1s";
-        
-    })
-    $( "#2020" ).on( "mouseleave", function() {
-        element.style.opacity = 0;
-        element.style.animation = "fadeOut 1s"; 
-    })
-    $( "#2021" ).on( "mouseleave", function() {
-        element.style.opacity = 0;
-        element.style.animation = "fadeOut 1s"; 
-    })
-    $( "#2022" ).on( "mouseleave", function() {
-        element.style.opacity = 0;
-        element.style.animation = "fadeOut 1s"; 
-    })
-    $( "#2023" ).on( "mouseleave", function() {
-        element.style.opacity = 0;
-        element.style.animation = "fadeOut 1s"; 
-    })
-})
+document.getElementById("html").style.height = programmingSkills["HTML"] + "%";
+document.getElementById("css").style.height = programmingSkills["CSS"] + "%";
+document.getElementById("js").style.height = programmingSkills["Javascript"] + "%";
