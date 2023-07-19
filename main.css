@@ -55,6 +55,10 @@ body{
     .ChartPanel{
         height:5%;
     }
+    .Icon{
+        width:100px;
+        height:100px;
+    }
 }
 @media screen and (width > 500px){
     .ChartPanel{
