@@ -1,7 +1,5 @@
 body{
     background-image:url("banner.png");
-    background-repeat:no-repeat;
-    background-size:100% 100%;
     display:flex;
     justify-content:center;
 }
@@ -60,10 +58,25 @@ body{
         width:100px;
         height:100px;
     }
+    body{
+        background-repeat: repeat-y;
+        background-size:100% 50%;
+    }
+    
 }
 @media screen and (width > 500px){
     .ChartPanel{
         height:20%;
+    }
+    body{
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+    }
+}
+@media screen and (width > 500px) and (width < 800px){
+    body{
+        background-size:50% 30%;
+        background-repeat: repeat;
     }
 }
 @media screen and (width < 800px){
@@ -74,10 +87,6 @@ body{
 @media screen and (width < 500px){
     .Font2{
         transform:translateY(5px);
-    }
-
-    body{
-        background-repeat: repeat-y;
     }
 }
 
@@ -98,4 +107,22 @@ body{
     height:0%;
 
     margin:1%;
+}
+
+.HoverText{
+    font-size:1.5vw;
+    font-family:sans-serif;
+
+    position:absolute;
+    z-index:10;
+}
+
+@keyframes FadeIn{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+
+@keyframes FadeOut{
+    0%{opacity:1;}
+    100%{opacity:0;}
 }
