@@ -50,6 +50,7 @@ body{
     font-family:sans-serif;
 
     position:relative;
+    transform:translateY(25px);
 }
 @media screen and (width <= 500px){
     .ChartPanel{
@@ -63,6 +64,20 @@ body{
 @media screen and (width > 500px){
     .ChartPanel{
         height:20%;
+    }
+}
+@media screen and (width < 800px){
+    .Font2{
+        transform:translateY(10px);
+    }
+}
+@media screen and (width < 500px){
+    .Font2{
+        transform:translateY(5px);
+    }
+
+    body{
+        background-repeat: repeat-y;
     }
 }
 
